@@ -1,0 +1,5 @@
+node_modules/
+.env
+state/
+sim-output*.md
+.DS_Store

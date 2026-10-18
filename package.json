@@ -1,0 +1,21 @@
+{
+  "name": "london-trip-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Location-aware Telegram trip assistant for London, Oct 9-12 2026",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --env-file=.env src/index.js",
+    "simulate": "node scripts/simulate.js",
+    "simulate:live": "node --env-file=.env scripts/simulate.js --live",
+    "check-data": "node scripts/check-data.js",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0"
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "trip": {
+    "name": "Ireland road trip, Oct 2–9 2026",
+    "timezone": "Europe/Dublin",
+    "region": { "name": "Ireland", "bbox": [-10.8, 51.3, -5.3, 55.5] },
+    "transport": "drive",
+    "wakeWord": "Ed",
+    "currency": "EUR",
+    "planningRules": "The road trip is a one-way loop around the island: Dublin → Cork → Kerry → Clare → Galway → Mayo → Sligo → Donegal → Causeway Coast → Belfast (flight out of Belfast City on 9 Oct). Always keep moving forward along it: never suggest doubling back to somewhere already passed, prefer stops that are on the way to tonight's base, keep the pace (15–30 min per sight) so the driving gets done in daylight, and when they fall behind, suggest what to drop rather than what to add.",
+    "sunPings": ["sunrise", "sunset"],
+    "size": 3,
+    "group": "3 guys (Ankith, Alex, Sam), ~25, from California. Into fashion (especially streetwear) and football club shops, music, food, pubs and big scenery. Cram-mode road trip: 15–30 min per sight, a 2h shopping block in each major city.",
+    "about": "Dublin car-free for the first two days, then a rental car from Oct 4 to Belfast (drop Oct 9). Bases: Dublin (Leonardo Christchurch) x2 → Kerry → Galway (Geata Na Cathrach) → Achill/Westport → Kilcar, Donegal → Belfast (10 Donegall Sq S). Sunset is ~19:00 (earlier further north). Currency: € in the Republic, £ in Northern Ireland (Derry, Causeway Coast, Belfast).",
+    "exampleDestination": "the Cliffs of Moher",
+    "helpExamples": {
+      "directions": "Dingle",
+      "plan": "2026-10-03 19:30-21:30 Dinner with a friend @ The Brazen Head",
+      "skip": "Guinness",
+      "want": "Murphy's Ice Cream Dingle",
+      "nearby": ["food near me", "pub near me", "shops near me"]
+    },
+    "home": { "name": "Leonardo Hotel Dublin Christchurch", "address": "Christchurch Pl, Dublin 8", "lat": 53.3429, "lng": -6.2706 },
+    "schedule": {
+      "morningBrief": "07:30",
+      "nightWrap": "22:00",
+      "quietStart": "00:30",
+      "quietEnd": "06:30",
+      "minGapBetweenUnpromptedMin": 45,
+      "minGapBetweenFreeTimeMin": 120,
+      "freeTimeWindow": ["10:00", "22:30"]
+    }
+  },
+
+  "days": {
+    "2026-10-02": {
+      "label": "Fri 2 Oct: land + Dublin evening",
+      "transport": "city",
+      "base": { "name": "Leonardo Hotel Dublin Christchurch", "address": "Christchurch Pl, Dublin 8", "lat": 53.3429, "lng": -6.2706 },
+      "flow": "Land 12:40 → hotel ~14:30 → St Patrick's Cathedral + Christ Church (5 min apart) → Temple Bar wander (The Temple Bar Pub photo, Bohs Store @ Connolly Books) → evening pints at The Brazen Head or BAR 1661.",
+      "areas": ["dublin-liberties", "temple-bar"],
+      "notes": "Dublin Castle is closed to the public for all of 2026 (EU Presidency), so skip it.",
+      "nightNote": "Early start-ish tomorrow: Book of Kells slot is 09:30."
+    },
+    "2026-10-03": {
+      "label": "Sat 3 Oct: Dublin full day",
+      "transport": "city",
+      "base": { "name": "Leonardo Hotel Dublin Christchurch", "address": "Christchurch Pl, Dublin 8", "lat": 53.3429, "lng": -6.2706 },
+      "flow": "Book of Kells 09:30 (first slot; it opens 09:30 in October, not 09:00) → Kilmainham Gaol 10:45 → Guinness Storehouse 13:00 (or Jameson Bow St) → 2h shopping on Drury St / Grafton St (35 Vintage, Intersport Elverys, Liverpool FC Store on Henry St) → pints at O'Donoghue's (trad music) or The Gravediggers.",
+      "areas": ["dublin-trinity", "grafton", "dublin-liberties", "temple-bar"],
+      "wakeBy": "08:15",
+      "prebook": "Book of Kells 09:30, Kilmainham Gaol 10:45 (tickets drop 28 days ahead, go fast), Guinness Storehouse 13:00.",
+      "notes": "Kilmainham is cold inside. Bring a layer.",
+      "fallback": "If Kilmainham runs long, push Guinness later (it's open until 18:00 on Saturdays) and shorten shopping.",
+      "nightNote": "Car pickup tomorrow ~10:30, then about 5h of driving. Pack tonight."
+    },
+    "2026-10-04": {
+      "label": "Sun 4 Oct: Dublin → Cork → Killarney (drive day)",
+      "transport": "car",
+      "driveHours": 5,
+      "base": { "name": "Kerry base", "address": "Co. Kerry", "lat": 52.04, "lng": -9.63 },
+      "flow": "Pick up the car ~10:30 → leave Dublin 11:00 (skip Rock of Cashel) → Cork ~14:15 for a 2h wander/shop → leave 16:15 → Torc Waterfall ~17:50 → Ladies' View ~18:25 (sunset 19:10) → Ross Castle exterior → check in ~19:40 → dinner + pints at J.M. Reidy's or Murphy's Bar, Killarney.",
+      "areas": ["cork-city", "killarney", "killarney-np"],
+      "wakeBy": "08:45",
+      "notes": "It's Sunday: Cork's English Market is closed Sundays. Shop St Patrick's St / Oliver Plunkett St instead (most shops ~12:00–18:00 Sun). Cork City FC's store is out in Douglas Village Shopping Centre, ~10 min drive.",
+      "fallback": "Leaving Cork late? Drop Ross Castle, then Torc. Ladies' View at sunset (19:10) is the keeper.",
+      "nightNote": "Tomorrow is the big one: wheels up 07:55 for Kerry Cliffs (they open 09:30). Fuel up tonight."
+    },
+    "2026-10-05": {
+      "label": "Mon 5 Oct: Kerry Cliffs → Dingle/Slea Head → ferry → Cliffs of Moher → Galway (big day)",
+      "transport": "car",
+      "driveHours": 9.5,
+      "base": { "name": "Geata Na Cathrach", "address": "Fairgreen Rd, Galway", "lat": 53.2744, "lng": -9.0448 },
+      "flow": "Leave 07:55 → Kerry Cliffs 09:30 (opening) → Inch Strand ~11:40 → Dingle town 12:15 (Dick Mack's peek, Murphy's Ice Cream) → Slea Head clockwise 12:50–14:10 (Coumeenoole, Dunquin Pier, Blaskets) → leave Dingle 14:25 via N86 → Tarbert for the 16:30 ferry → Cliffs of Moher ~17:55 (sunset 19:06) → Galway ~20:15, late dinner (The Dough Bros / Kai) → Tigh Neachtain or Taaffes.",
+      "areas": ["portmagee", "dingle", "slea-head", "moher", "galway-city"],
+      "wakeBy": "07:00",
+      "notes": "Two fixes to the original plan: Kerry Cliffs opens 09:30 (not 08:30), so leave at 07:55 instead of 06:30. The Tarbert ferry leaves on the HALF hour (15:30, 16:30, 17:30, last 19:30); there's no 16:00 sailing.",
+      "fallback": "45+ min behind: skip Kerry Cliffs (leave base ~09:00 straight for Inch). That gets you the 15:30 ferry and Moher by ~17:00. Also droppable: Inch Strand and the Dingle town linger. Missing the 16:30 ferry just means the 17:30, and Moher right at sunset.",
+      "nightNote": "Easier day tomorrow: Galway shopping from 09:00."
+    },
+    "2026-10-06": {
+      "label": "Tue 6 Oct: Galway shopping → Connemara → Westport → Achill",
+      "transport": "car",
+      "driveHours": 4.5,
+      "base": { "name": "Achill base", "address": "Achill Island, Co. Mayo", "lat": 53.97, "lng": -9.96 },
+      "flow": "Galway 2h shop 09:00–11:00 (Shop St, Aran Sweater Market, Thomas Dillon's Claddagh Ring) → Sky Road loop ~12:30 → Kylemore Abbey grounds ~13:25 → Connemara NP Diamond Hill lower loop ~14:20 → Westport ~16:15, wander + dinner → drive on to the Achill base (~55 min).",
+      "areas": ["galway-city", "clifden", "kylemore", "westport", "achill"],
+      "wakeBy": "08:15",
+      "notes": "Your saved base is on Achill Island, about 55 min past Westport, not in Westport itself. Galway United's shop is out on the Tuam Rd industrial estate, not on Shop St. Most Shop St stores open ~09:30–10:00.",
+      "fallback": "Behind: trim Diamond Hill to 30 min or skip Sky Road; Kylemore is the keeper.",
+      "nightNote": "Tomorrow: Achill option (Slievemore + Atlantic Drive) is right on your doorstep."
+    },
+    "2026-10-07": {
+      "label": "Wed 7 Oct: Achill → Sligo → Kilcar",
+      "transport": "car",
+      "driveHours": 5,
+      "base": { "name": "Shannagh, Kilcar", "address": "Kilcar, Co. Donegal (check: your saved pin for Shannagh is in east Donegal, ~1h20 from Slieve League)", "lat": 54.631, "lng": -8.592 },
+      "flow": "Option B since you're sleeping on Achill: Slievemore Deserted Village 08:45 → Atlantic Drive loop → leave Achill ~10:40 → Strandhill Beach ~13:30 → Sligo town lunch + quick shop (Hargadon Bros, Sligo Rovers shop) → Glencar Waterfall + Devil's Chimney view ~15:10 → Gleniff Horseshoe drive-through ~16:15 → Kilcar ~18:20.",
+      "areas": ["achill", "sligo", "glencar", "kilcar"],
+      "wakeBy": "07:45",
+      "notes": "Option A (North Mayo: Céide Fields, which opens 10:00 in Oct, then Downpatrick Head) also works but is 1h30 from Achill. Both options reach Strandhill ~13:30. The Kilcar pin in your Google list ('Shannagh') points to east Donegal. Double-check the booking address; Slieve League tomorrow assumes you're in Kilcar.",
+      "fallback": "Behind: skip Gleniff Horseshoe. Glencar is the keeper and you still see Benbulben from there.",
+      "nightNote": "Early one tomorrow: Slieve League at sunrise (07:48), then the Causeway Coast."
+    },
+    "2026-10-08": {
+      "currency": "GBP",
+      "label": "Thu 8 Oct: Slieve League → Derry → Causeway Coast → Belfast",
+      "transport": "car",
+      "driveHours": 6,
+      "base": { "name": "Belfast (10 Donegall Sq S)", "address": "10 Donegall Square S, Belfast BT1 5JD", "lat": 54.5959, "lng": -5.9307 },
+      "flow": "Slieve League at sunrise 07:50 → Derry ~10:40 (walls walk 30 min) → Mussenden Temple ~12:05 → Dunluce Castle photo ~13:10 → Giant's Causeway 13:35 → Carrick-a-Rede 15:00 slot → Dark Hedges ~16:05 → Belfast ~17:35 → Victoria Square shopping (open till 21:00 Thursdays) → dinner 20:00.",
+      "areas": ["slieve-league", "derry", "causeway-coast", "belfast-centre"],
+      "wakeBy": "07:00",
+      "prebook": "Carrick-a-Rede timed slot around 15:00 (last crossing in October is ~15:30).",
+      "notes": "Slieve League → Derry is ~2h, so Derry is ~10:40, not 09:00. The Reds Shop, Linfield shop and SS Moore close ~17:30, so they won't fit unless you cut Carrick-a-Rede. You're in Northern Ireland from Derry on: £ and mph.",
+      "fallback": "Behind: make Derry a drive-by and skip Dunluce. Protect the Carrick-a-Rede slot and the Causeway.",
+      "nightNote": "Last morning tomorrow: Titanic Belfast opens 08:50, then BHD for the 12:00 flight. Return the car."
+    },
+    "2026-10-09": {
+      "currency": "GBP",
+      "label": "Fri 9 Oct: Titanic Belfast → BHD 12:00",
+      "transport": "car",
+      "flow": "Titanic Belfast 09:00 (fast 1h15 visit) → return the car → George Best Belfast City Airport (5–10 min away) by 10:45 for BA1395 at 12:00 → London!",
+      "areas": ["belfast-centre", "titanic-quarter"],
+      "wakeBy": "07:45",
+      "prebook": "Titanic Belfast 09:00 (opens 08:50).",
+      "notes": "Confirm where the rental car gets dropped. If it's at BHD, you're 10 min from Titanic."
+    }
+  },
+
+  "plans": [
+    {
+      "id": "land-dub", "type": "arrival", "fixed": false,
+      "title": "Land in Dublin (12:40)",
+      "start": "2026-10-02T12:40:00+01:00", "end": "2026-10-02T14:30:00+01:00",
+      "location": { "name": "Dublin Airport", "address": "Dublin Airport, Co. Dublin", "lat": 53.4264, "lng": -6.2499 },
+      "reminders": [
+        {
+          "at": "2026-10-02T12:45:00+01:00", "kind": "reminder", "whenInArea": "dublin-airport", "windowMin": 150,
+          "facts": {
+            "topic": "Welcome to Ireland! Airport → Leonardo Christchurch",
+            "best": "Taxi for 3 with bags: ~30–40 min to Christchurch, roughly €35–45 total. The easiest option.",
+            "cheaper": "Dublin Express / Aircoach coach to the city centre (~€10 each), then a 10–15 min walk.",
+            "note": "No car today or tomorrow. Dublin centre is walkable."
+          }
+        }
+      ]
+    },
+    { "id": "d2-stpats", "type": "stop", "title": "St Patrick's Cathedral", "start": "2026-10-02T15:00:00+01:00", "end": "2026-10-02T15:30:00+01:00", "location": { "name": "St Patrick's Cathedral", "address": "St Patrick's Close, Dublin 8", "lat": 53.3393, "lng": -6.2715 }, "radiusM": 250 },
+    { "id": "d2-christchurch", "type": "stop", "title": "Christ Church Cathedral", "start": "2026-10-02T15:35:00+01:00", "end": "2026-10-02T15:55:00+01:00", "location": { "name": "Christ Church Cathedral", "address": "Christchurch Pl, Dublin 8", "lat": 53.3435, "lng": -6.2711 }, "radiusM": 200 },
+    { "id": "d2-templebar", "type": "stop", "title": "Temple Bar wander (Temple Bar Pub, Bohs Store)", "start": "2026-10-02T16:10:00+01:00", "end": "2026-10-02T17:10:00+01:00", "location": { "name": "The Temple Bar Pub", "address": "47-48 Temple Bar, Dublin 2", "lat": 53.3455, "lng": -6.2642 }, "radiusM": 350 },
+    { "id": "d2-evening", "type": "stop", "title": "Pints: The Brazen Head or BAR 1661", "start": "2026-10-02T19:30:00+01:00", "end": "2026-10-02T22:30:00+01:00", "location": { "name": "The Brazen Head", "address": "20 Bridge St Lower, Dublin 8", "lat": 53.3449, "lng": -6.2763 }, "radiusM": 300 },
+
+    {
+      "id": "book-of-kells", "type": "booking", "fixed": true,
+      "title": "Book of Kells (Trinity College)",
+      "start": "2026-10-03T09:30:00+01:00", "end": "2026-10-03T10:20:00+01:00", "arriveEarlyMin": 10,
+      "location": { "name": "Trinity College Dublin (Book of Kells)", "address": "College Green, Dublin 2", "lat": 53.3438, "lng": -6.2546 },
+      "details": { "booking": "Pre-booked timed ticket (first slot 09:30)" }
+    },
+    {
+      "id": "kilmainham", "type": "booking", "fixed": true,
+      "title": "Kilmainham Gaol tour",
+      "start": "2026-10-03T10:45:00+01:00", "end": "2026-10-03T12:15:00+01:00", "arriveEarlyMin": 10,
+      "location": { "name": "Kilmainham Gaol", "address": "Inchicore Rd, Kilmainham, Dublin 8", "lat": 53.3418, "lng": -6.3091 },
+      "details": { "booking": "Guided tour only, pre-booked" },
+      "tips": "From Trinity: taxi ~15 min, or Luas Red line from Abbey St / Jervis to Suir Road + 10 min walk. It's cold inside."
+    },
+    {
+      "id": "guinness", "type": "booking", "fixed": true,
+      "title": "Guinness Storehouse",
+      "start": "2026-10-03T13:00:00+01:00", "end": "2026-10-03T14:45:00+01:00", "arriveEarlyMin": 5,
+      "location": { "name": "Guinness Storehouse", "address": "St James's Gate, Dublin 8", "lat": 53.3417, "lng": -6.2867 },
+      "details": { "booking": "Pre-booked 13:00 (swap to Jameson Bow St if that's what you book)" },
+      "tips": "15 min walk from Kilmainham. Gravity Bar pint at the end."
+    },
+    { "id": "d3-shopping", "type": "stop", "title": "Shopping block: Drury St / Grafton St", "start": "2026-10-03T15:30:00+01:00", "end": "2026-10-03T17:30:00+01:00", "location": { "name": "Drury St", "address": "Drury St, Dublin 2", "lat": 53.3422, "lng": -6.2634 }, "radiusM": 700, "note": "35 Vintage (Fade St), Intersport Elverys (Suffolk St); Liverpool FC Store is up on Henry St." },
+    { "id": "d3-pints", "type": "stop", "title": "Pints: O'Donoghue's (trad) or The Gravediggers", "start": "2026-10-03T18:00:00+01:00", "end": "2026-10-03T22:30:00+01:00", "location": { "name": "O'Donoghues Bar", "address": "15 Merrion Row, Dublin 2", "lat": 53.3382, "lng": -6.2542 }, "radiusM": 300 },
+
+    {
+      "id": "car-pickup", "type": "task", "fixed": false,
+      "title": "Pick up the rental car",
+      "start": "2026-10-04T10:30:00+01:00", "end": "2026-10-04T11:00:00+01:00",
+      "location": { "name": "Leonardo Hotel Dublin Christchurch", "address": "Christchurch Pl, Dublin 8", "lat": 53.3429, "lng": -6.2706 },
+      "reminders": [
+        {
+          "at": "2026-10-04T09:45:00+01:00", "kind": "reminder",
+          "facts": {
+            "topic": "Car day",
+            "pickup": "Car pickup ~10:30 (set the rental desk address in itinerary.json if it's not near the hotel). Check out first.",
+            "drive": "Leave Dublin by 11:00. Cork is ~3h (M7/M8). Drive on the LEFT; tolls on the M50/M7 area are paid online or at booths.",
+            "sunday": "It's Sunday: Cork's English Market is closed, so shop Patrick St / Oliver Plunkett St instead."
+          }
+        }
+      ]
+    },
+    { "id": "d4-cork", "type": "stop", "title": "Cork city: 2h wander + shop", "start": "2026-10-04T14:15:00+01:00", "end": "2026-10-04T16:15:00+01:00", "location": { "name": "St Patrick's Street, Cork", "address": "St Patrick's St, Cork", "lat": 51.8985, "lng": -8.4756 }, "radiusM": 1200, "note": "English Market closed Sundays. Cork City FC store is in Douglas Village SC (10 min drive)." },
+    { "id": "d4-torc", "type": "stop", "title": "Torc Waterfall", "start": "2026-10-04T17:50:00+01:00", "end": "2026-10-04T18:10:00+01:00", "location": { "name": "Torc Waterfall", "address": "Killarney National Park", "lat": 52.0034, "lng": -9.5058 }, "radiusM": 800 },
+    { "id": "d4-ladies", "type": "stop", "title": "Ladies' View (sunset 19:10)", "start": "2026-10-04T18:25:00+01:00", "end": "2026-10-04T18:45:00+01:00", "location": { "name": "Ladies' View", "address": "N71, Killarney National Park", "lat": 51.9683, "lng": -9.5951 }, "radiusM": 600 },
+    { "id": "d4-ross", "type": "stop", "title": "Ross Castle (exterior photo)", "start": "2026-10-04T19:05:00+01:00", "end": "2026-10-04T19:15:00+01:00", "location": { "name": "Ross Castle", "address": "Ross Rd, Killarney", "lat": 52.0412, "lng": -9.5314 }, "radiusM": 500 },
+    { "id": "d4-dinner", "type": "stop", "title": "Dinner + pints: J.M. Reidy's or Murphy's Bar, Killarney", "start": "2026-10-04T20:00:00+01:00", "end": "2026-10-04T22:30:00+01:00", "location": { "name": "J.M. Reidy's", "address": "4 Main St, Killarney", "lat": 52.0589, "lng": -9.5094 }, "radiusM": 500 },
+
+    { "id": "d5-kerrycliffs", "type": "stop", "title": "Kerry Cliffs (opens 09:30)", "start": "2026-10-05T09:30:00+01:00", "end": "2026-10-05T10:00:00+01:00", "location": { "name": "Kerry Cliffs (Aillte Chiarraí)", "address": "Portmagee, Co. Kerry", "lat": 51.8685, "lng": -10.3855 }, "radiusM": 900, "note": "Weather-dependent opening." },
+    { "id": "d5-inch", "type": "stop", "title": "Inch Strand", "start": "2026-10-05T11:40:00+01:00", "end": "2026-10-05T11:50:00+01:00", "location": { "name": "Inch Strand", "address": "Inch, Co. Kerry", "lat": 52.137, "lng": -9.978 }, "radiusM": 1500 },
+    { "id": "d5-dingle", "type": "stop", "title": "Dingle town (Dick Mack's, Murphy's Ice Cream)", "start": "2026-10-05T12:15:00+01:00", "end": "2026-10-05T12:45:00+01:00", "location": { "name": "Dingle", "address": "Dingle, Co. Kerry", "lat": 52.1409, "lng": -10.2671 }, "radiusM": 900 },
+    { "id": "d5-slea", "type": "stop", "title": "Slea Head Drive (Coumeenoole, Dunquin Pier, Blasket views)", "start": "2026-10-05T12:50:00+01:00", "end": "2026-10-05T14:10:00+01:00", "location": { "name": "Slea Head / Coumeenoole", "address": "Slea Head Drive, Co. Kerry", "lat": 52.1063, "lng": -10.46 }, "radiusM": 6000, "note": "Clockwise loop; back through Dingle and out on the N86. Conor Pass only if you're ahead." },
+    {
+      "id": "ferry", "type": "ferry", "fixed": true,
+      "title": "Tarbert → Killimer ferry (16:30)",
+      "start": "2026-10-05T16:30:00+01:00", "end": "2026-10-05T16:50:00+01:00", "arriveEarlyMin": 15,
+      "location": { "name": "Tarbert ferry terminal", "address": "Tarbert, Co. Kerry", "lat": 52.5847, "lng": -9.37 },
+      "details": { "operator": "Shannon Ferries, departs Tarbert every hour on the half hour (last 19:30); ~20 min crossing; pay on board" },
+      "ifMissed": "Next sailing is 17:30 (then 18:30, last 19:30). The Cliffs of Moher shifts to ~18:55, right at sunset.",
+      "tips": "Dingle → Tarbert is ~1h45 via the N86/N69."
+    },
+    { "id": "d5-moher", "type": "stop", "title": "Cliffs of Moher (sunset 19:06)", "start": "2026-10-05T17:55:00+01:00", "end": "2026-10-05T18:40:00+01:00", "location": { "name": "Cliffs of Moher", "address": "Lislorkan North, Co. Clare", "lat": 52.9715, "lng": -9.4309 }, "radiusM": 1200 },
+    { "id": "d5-galway", "type": "stop", "title": "Galway late dinner (Dough Bros / Kai) → Tigh Neachtain or Taaffes", "start": "2026-10-05T20:15:00+01:00", "end": "2026-10-05T23:00:00+01:00", "location": { "name": "Galway Latin Quarter", "address": "Quay St / Cross St, Galway", "lat": 53.2716, "lng": -9.0535 }, "radiusM": 700 },
+
+    { "id": "d6-shopping", "type": "stop", "title": "Galway shopping block (Shop St, Aran Sweater Market, Thomas Dillon's)", "start": "2026-10-06T09:00:00+01:00", "end": "2026-10-06T11:00:00+01:00", "location": { "name": "Shop St, Galway", "address": "Shop St, Galway", "lat": 53.2728, "lng": -9.0526 }, "radiusM": 800 },
+    { "id": "d6-skyrd", "type": "stop", "title": "Sky Road loop, Clifden", "start": "2026-10-06T12:30:00+01:00", "end": "2026-10-06T13:00:00+01:00", "location": { "name": "Sky Rd", "address": "Clifden, Co. Galway", "lat": 53.5037, "lng": -10.0682 }, "radiusM": 4000 },
+    { "id": "d6-kylemore", "type": "stop", "title": "Kylemore Abbey (grounds + exterior)", "start": "2026-10-06T13:25:00+01:00", "end": "2026-10-06T14:10:00+01:00", "location": { "name": "Kylemore Abbey", "address": "Pollacappul, Co. Galway", "lat": 53.5616, "lng": -9.8893 }, "radiusM": 900 },
+    { "id": "d6-diamond", "type": "stop", "title": "Connemara NP: Diamond Hill lower loop", "start": "2026-10-06T14:20:00+01:00", "end": "2026-10-06T15:20:00+01:00", "location": { "name": "Connemara National Park", "address": "Letterfrack, Co. Galway", "lat": 53.5402, "lng": -9.883 }, "radiusM": 1500 },
+    { "id": "d6-westport", "type": "stop", "title": "Westport wander + dinner", "start": "2026-10-06T16:15:00+01:00", "end": "2026-10-06T18:45:00+01:00", "location": { "name": "Westport", "address": "Westport, Co. Mayo", "lat": 53.8003, "lng": -9.5186 }, "radiusM": 1200, "note": "Then ~55 min on to the Achill base." },
+
+    { "id": "d7-slievemore", "type": "stop", "title": "Slievemore Deserted Village", "start": "2026-10-07T08:45:00+01:00", "end": "2026-10-07T09:15:00+01:00", "location": { "name": "Slievemore Deserted Village", "address": "Slievemore, Achill", "lat": 53.9964, "lng": -10.0767 }, "radiusM": 900 },
+    { "id": "d7-atlantic", "type": "stop", "title": "Achill Atlantic Drive", "start": "2026-10-07T09:25:00+01:00", "end": "2026-10-07T10:30:00+01:00", "location": { "name": "Atlantic Drive, Achill", "address": "Atlantic Drive, Achill Island", "lat": 53.905, "lng": -10.02 }, "radiusM": 6000 },
+    { "id": "d7-strandhill", "type": "stop", "title": "Strandhill Beach", "start": "2026-10-07T13:30:00+01:00", "end": "2026-10-07T13:45:00+01:00", "location": { "name": "Strandhill Beach", "address": "Strandhill, Co. Sligo", "lat": 54.2699, "lng": -8.6104 }, "radiusM": 900 },
+    { "id": "d7-sligo", "type": "stop", "title": "Sligo town: lunch + quick shop (Hargadon Bros, Sligo Rovers)", "start": "2026-10-07T13:55:00+01:00", "end": "2026-10-07T14:55:00+01:00", "location": { "name": "Sligo town", "address": "O'Connell St, Sligo", "lat": 54.2706, "lng": -8.4752 }, "radiusM": 1000 },
+    { "id": "d7-glencar", "type": "stop", "title": "Glencar Waterfall + Devil's Chimney view", "start": "2026-10-07T15:10:00+01:00", "end": "2026-10-07T15:40:00+01:00", "location": { "name": "Glencar Waterfall", "address": "Glencar, Co. Leitrim", "lat": 54.3402, "lng": -8.3685 }, "radiusM": 1500 },
+    { "id": "d7-gleniff", "type": "stop", "title": "Gleniff Horseshoe drive-through", "start": "2026-10-07T16:15:00+01:00", "end": "2026-10-07T16:40:00+01:00", "location": { "name": "Gleniff Horseshoe", "address": "Gleniff, Co. Sligo", "lat": 54.3709, "lng": -8.4151 }, "radiusM": 3000 },
+
+    { "id": "d8-slieveleague", "type": "stop", "title": "Slieve League cliffs (sunrise 07:48)", "start": "2026-10-08T07:50:00+01:00", "end": "2026-10-08T08:35:00+01:00", "location": { "name": "Slieve League Cliffs", "address": "Teelin, Co. Donegal", "lat": 54.634, "lng": -8.6475 }, "radiusM": 2000 },
+    { "id": "d8-derry", "type": "stop", "title": "Derry walls (30 min walk)", "start": "2026-10-08T10:40:00+01:00", "end": "2026-10-08T11:10:00+01:00", "location": { "name": "Derry city walls", "address": "Shipquay St, Derry", "lat": 54.9961, "lng": -7.3213 }, "radiusM": 900 },
+    { "id": "d8-mussenden", "type": "stop", "title": "Mussenden Temple / Downhill", "start": "2026-10-08T12:05:00+01:00", "end": "2026-10-08T12:35:00+01:00", "location": { "name": "Mussenden Temple", "address": "Downhill, Castlerock", "lat": 55.1678, "lng": -6.8108 }, "radiusM": 900 },
+    { "id": "d8-dunluce", "type": "stop", "title": "Dunluce Castle (photo)", "start": "2026-10-08T13:10:00+01:00", "end": "2026-10-08T13:25:00+01:00", "location": { "name": "Dunluce Castle", "address": "87 Dunluce Rd, Bushmills", "lat": 55.2107, "lng": -6.5796 }, "radiusM": 600 },
+    { "id": "d8-causeway", "type": "stop", "title": "Giant's Causeway", "start": "2026-10-08T13:35:00+01:00", "end": "2026-10-08T14:45:00+01:00", "location": { "name": "Giant's Causeway", "address": "Bushmills BT57 8SZ", "lat": 55.2329, "lng": -6.5168 }, "radiusM": 1200, "note": "Visitor centre 09:00–17:00 until Oct 24 (last entry 16:00). The stones themselves are free and always open." },
+    {
+      "id": "carrick-a-rede", "type": "booking", "fixed": true,
+      "title": "Carrick-a-Rede rope bridge (timed slot)",
+      "start": "2026-10-08T15:00:00+01:00", "end": "2026-10-08T15:45:00+01:00", "arriveEarlyMin": 10,
+      "location": { "name": "Carrick-a-Rede (National Trust)", "address": "Ballintoy, Ballycastle BT54 6LS", "lat": 55.2395, "lng": -6.3325 },
+      "details": { "booking": "Pre-book a ~15:00 timed slot on nationaltrust.org.uk (last crossing ~15:30 in Oct; closes in high wind)" }
+    },
+    { "id": "d8-darkhedges", "type": "stop", "title": "The Dark Hedges", "start": "2026-10-08T16:05:00+01:00", "end": "2026-10-08T16:25:00+01:00", "location": { "name": "The Dark Hedges", "address": "Bregagh Rd, Stranocum BT53 8PX", "lat": 55.1347, "lng": -6.3808 }, "radiusM": 700 },
+    { "id": "d8-shopping", "type": "stop", "title": "Belfast shopping: Victoria Square (till 21:00 Thu)", "start": "2026-10-08T17:45:00+01:00", "end": "2026-10-08T19:45:00+01:00", "location": { "name": "Victoria Square", "address": "1 Victoria Square, Belfast BT1 4QG", "lat": 54.5993, "lng": -5.9249 }, "radiusM": 900 },
+    { "id": "d8-dinner", "type": "stop", "title": "Belfast dinner", "start": "2026-10-08T20:00:00+01:00", "end": "2026-10-08T22:30:00+01:00", "location": { "name": "Belfast city centre", "address": "Belfast", "lat": 54.5973, "lng": -5.9301 }, "radiusM": 1200 },
+
+    {
+      "id": "titanic", "type": "booking", "fixed": true,
+      "title": "Titanic Belfast (fast visit)",
+      "start": "2026-10-09T09:00:00+01:00", "end": "2026-10-09T10:15:00+01:00", "arriveEarlyMin": 5,
+      "location": { "name": "Titanic Belfast", "address": "1 Olympic Way, Queen's Road, Belfast BT3 9EP", "lat": 54.6081, "lng": -5.91 },
+      "details": { "booking": "Pre-booked 09:00 (opens 08:50)" }
+    },
+    {
+      "id": "ba1395", "type": "flight", "fixed": true,
+      "title": "BA1395 Belfast City (BHD) → London Heathrow",
+      "start": "2026-10-09T12:00:00+01:00", "end": "2026-10-09T13:25:00+01:00",
+      "arriveBy": "2026-10-09T10:45:00+01:00",
+      "location": { "name": "George Best Belfast City Airport (BHD)", "address": "Sydenham Bypass, Belfast BT3 9JH", "lat": 54.6181, "lng": -5.8725 },
+      "details": { "airline": "British Airways", "flight": "BA1395", "confirmation": "AL5PRX", "arrives": "Heathrow 13:25; the London bot takes over from there" },
+      "tips": "Return the rental car first. BHD is ~10 min from Titanic Belfast."
+    }
+  ]
+}

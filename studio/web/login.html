@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reel Studio</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="login">
+<form id="f" class="card login-card">
+  <h1>Reel Studio</h1>
+  <p class="muted">Ireland &amp; London, Oct 2026</p>
+  <input id="pw" type="password" placeholder="Password" autocomplete="current-password" autofocus>
+  <button class="btn primary" type="submit">Open</button>
+  <p id="err" class="err" hidden>Wrong password</p>
+</form>
+<script>
+document.getElementById('f').onsubmit = async (e) => {
+  e.preventDefault();
+  const r = await fetch('/api/login', {method: 'POST', headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({password: document.getElementById('pw').value})});
+  if (r.ok) location.reload(); else document.getElementById('err').hidden = false;
+};
+</script>
+</body>
+</html>

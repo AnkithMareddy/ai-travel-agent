@@ -1,0 +1,205 @@
+{
+  "trip": {
+    "name": "London, Oct 9–12 2026",
+    "region": { "name": "London", "bbox": [-0.51, 51.28, 0.33, 51.69] },
+    "transport": "tfl",
+    "currency": "GBP",
+    "planningRules": "Fixed plans come first. Suggest things near where they are or on the way to the next fixed plan; don't send them across London and back.",
+    "sunPings": ["sunset"],
+    "size": 5,
+    "about": "Home base: Airbnb in Marylebone, near Marble Arch. Getting around: Tube, Elizabeth line, buses, walking; Uber/black cab late at night.",
+    "exampleDestination": "Kutir",
+    "timezone": "Europe/London",
+    "days": ["2026-10-09", "2026-10-10", "2026-10-11", "2026-10-12"],
+    "group": "5 guys, ~25, from California. Into fashion (especially streetwear), music, food, movies and sports. Fixed plans come first, efficient transport second, sightseeing and shopping fill the gaps.",
+    "home": {
+      "name": "Airbnb (Marylebone)",
+      "address": "Marylebone, London W1",
+      "lat": 51.514,
+      "lng": -0.1610,
+      "notes": "Nearest stations: Marble Arch (Central line, 3 min walk) and Bond Street (Elizabeth, Central, Jubilee, 10 min walk). Elizabeth line from Bond Street goes direct to Heathrow."
+    },
+    "schedule": {
+      "morningBrief": "08:30",
+      "nightWrap": "22:30",
+      "quietStart": "01:00",
+      "quietEnd": "08:00",
+      "minGapBetweenUnpromptedMin": 45,
+      "minGapBetweenFreeTimeMin": 90,
+      "freeTimeWindow": ["10:00", "23:15"]
+    }
+  },
+
+  "days": {
+    "2026-10-09": {
+      "label": "Fri 9 Oct: travel day + West Ham",
+      "flow": "Fly in from Belfast → Elizabeth line to Bond Street → drop bags → Selfridges / Soho for a couple of hours → Central line from Marble Arch to Stratford → match → smart exit home.",
+      "areas": ["marylebone", "soho", "stratford"],
+      "wakeBy": "09:00"
+    },
+    "2026-10-10": {
+      "label": "Sat 10 Oct: Soho streetwear → Chelsea match → Kutir",
+      "flow": "Soho/Carnaby streetwear when shops open (~11:00): Supreme, Palace, Stüssy, ALD, END., Footpatrol, record shops on Berwick St, Kith on Regent St. Grab lunch by 13:00, then District/Piccadilly line west to Stamford Bridge by 14:20 for Chelsea vs Bournemouth (15:00). After the match walk the King's Road (Saatchi Gallery) to Kutir for 19:15.",
+      "areas": ["soho", "mayfair", "fulham", "chelsea"],
+      "wakeBy": "09:45"
+    },
+    "2026-10-11": {
+      "label": "Sun 11 Oct: East London → Borough → South Bank → OMA",
+      "flow": "Brick Lane / Shoreditch in the morning (Sunday markets, Beigel Bake, Rough Trade East, Goodhood) → Borough Market before it closes at 16:00 → Tower Bridge / South Bank / Tate Modern / BFI → OMA 21:00. NFL games on Sunday evening if you want a sports bar.",
+      "areas": ["brick-lane", "shoreditch", "borough", "tower", "south-bank", "bermondsey"],
+      "wakeBy": "09:30"
+    },
+    "2026-10-12": {
+      "label": "Mon 12 Oct: checkout → Heathrow T3",
+      "flow": "Pack, quick breakfast near the Airbnb, Selfridges if there's time (opens 10:00), checkout, Elizabeth line from Bond Street to Heathrow Terminals 2 & 3. Be at T3 by 11:30.",
+      "areas": ["marylebone"],
+      "wakeBy": "08:00"
+    }
+  },
+
+  "plans": [
+    {
+      "id": "ba1395",
+      "type": "flight",
+      "fixed": true,
+      "title": "BA1395 Belfast (BHD) → Heathrow (LHR)",
+      "start": "2026-10-09T12:00:00+01:00",
+      "end": "2026-10-09T13:25:00+01:00",
+      "arriveBy": "2026-10-09T11:00:00+01:00",
+      "location": { "name": "George Best Belfast City Airport (BHD)", "address": "Sydenham Bypass, Belfast BT3 9JH", "lat": 54.6181, "lng": -5.8725 },
+      "details": { "airline": "British Airways", "flight": "BA1395", "confirmation": "AL5PRX", "arrives": "Heathrow 13:25 (BA domestic arrivals normally use Terminal 5; check the BA app)" },
+      "tips": "Leave-by for this one uses a rough distance estimate (TfL only covers London). Belfast City airport is ~10–15 min by taxi from the city centre."
+    },
+    {
+      "id": "lhr-transfer",
+      "type": "transfer",
+      "fixed": false,
+      "title": "Heathrow → Airbnb, drop bags",
+      "start": "2026-10-09T13:25:00+01:00",
+      "end": "2026-10-09T15:15:00+01:00",
+      "location": { "name": "Airbnb (Marylebone)", "address": "Marylebone, London W1", "lat": 51.514, "lng": -0.1610 },
+      "reminders": [
+        {
+          "at": "2026-10-09T13:30:00+01:00",
+          "kind": "reminder",
+          "whenInArea": "heathrow",
+          "windowMin": 180,
+          "facts": {
+            "topic": "Landed at Heathrow: how to get to the Airbnb",
+            "best": "Elizabeth line from Heathrow (Terminal 5 or Terminals 2&3 station) direct to Bond Street, ~35–40 min, about £13–14 each with contactless/Apple Pay. Tap the same card/phone in and out. Bond Street → Airbnb is a 10 min walk (or Marble Arch on the Central line is 3 min from the door).",
+            "alternative": "Black cab/Uber for 5 with bags is ~60–75 min in traffic and roughly £70–110 total (you'd need an XL/2 cars). Only worth it if bags are huge.",
+            "avoid": "Heathrow Express goes to Paddington, which is the wrong side of Hyde Park for you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "westham-qpr",
+      "type": "match",
+      "fixed": true,
+      "title": "West Ham United vs QPR",
+      "start": "2026-10-09T20:00:00+01:00",
+      "end": "2026-10-09T21:55:00+01:00",
+      "arriveEarlyMin": 45,
+      "location": { "name": "London Stadium", "address": "Queen Elizabeth Olympic Park, London E20 2ST", "lat": 51.5387, "lng": -0.0166 },
+      "details": { "tickets": "5 tickets, Shortside Upper", "kickoff": "20:00 (Championship, live on Sky Sports)" },
+      "tips": "From the Airbnb: Central line from Marble Arch goes direct to Stratford (~25 min), or the Elizabeth line from Bond Street (~17 min). From Stratford station it's a 15–20 min walk through Westfield to the stadium. Bags bigger than A4 aren't allowed. Wear layers: it gets cold up in the Upper tier at night.",
+      "reminders": [
+        {
+          "at": "2026-10-09T21:45:00+01:00",
+          "kind": "exit_plan",
+          "facts": {
+            "topic": "Smart exit after the match",
+            "situation": "Stratford station gets rammed after the final whistle (~21:55). Police hold queues on the walk back; 30–45 min waits are normal.",
+            "option1": "Leave on 85–88 min if the game's decided and walk straight to Stratford: Central line direct to Marble Arch (~25 min) or Elizabeth line direct to Bond Street (~17 min). Friday = Night Tube on the Central line, so no rush on time.",
+            "option2": "Hang back 30–40 min: grab food or a drink in Westfield Stratford City and let the crowd clear, then take the Central/Elizabeth line home.",
+            "option3": "Walk 15–20 min to Hackney Wick (Overground) to dodge the Stratford crush. Handy if you're heading to East London after.",
+            "avoid": "Pudding Mill Lane DLR is usually exit-only / closed after matches."
+          }
+        }
+      ]
+    },
+    {
+      "id": "chelsea-bournemouth",
+      "type": "match",
+      "fixed": true,
+      "title": "Chelsea vs Bournemouth",
+      "start": "2026-10-10T15:00:00+01:00",
+      "end": "2026-10-10T16:55:00+01:00",
+      "arriveEarlyMin": 40,
+      "location": { "name": "Stamford Bridge", "address": "Fulham Road, London SW6 1HS", "lat": 51.4817, "lng": -0.1910 },
+      "details": { "kickoff": "15:00 (Premier League; kick-off times can move for TV, so check the Chelsea app)", "tickets": "Group tickets (add block/seat details here)" },
+      "tips": "Fulham Broadway (District line) is the nearest station but gets jammed; West Brompton (District/Overground) is a calmer 10 min walk. Stamford Bridge to Kutir is only ~25 min on foot or bus 14/414 towards Chelsea, so walk the King's Road to dinner after the match.",
+      "reminders": [
+        {
+          "at": "2026-10-10T16:45:00+01:00",
+          "kind": "exit_plan",
+          "facts": {
+            "topic": "After the Chelsea match: straight to Kutir",
+            "situation": "Final whistle ~16:55. Fulham Broadway station queues build fast.",
+            "option1": "Skip the Tube: walk ~25 min along Fulham Road / King's Road to Chelsea, with time for a drink near Sloane Square before Kutir at 19:15.",
+            "option2": "Bus 14 or 414 from Fulham Road towards South Kensington/Chelsea if legs are tired.",
+            "avoid": "Fulham Broadway straight after the whistle, unless you're going back to the Airbnb first."
+          }
+        }
+      ]
+    },
+    {
+      "id": "kutir",
+      "type": "dinner",
+      "fixed": true,
+      "title": "Dinner at Kutir",
+      "start": "2026-10-10T19:15:00+01:00",
+      "end": "2026-10-10T21:15:00+01:00",
+      "arriveEarlyMin": 5,
+      "location": { "name": "Kutir", "address": "10 Lincoln Street, London SW3 2TS", "lat": 51.4916, "lng": -0.1611 },
+      "details": { "party": "Table for 5", "booking": "OpenTable (confirmation in app)", "name": "Group reservation", "phone": "020 7581 1144", "style": "Modern Indian from Rohit Ghai (ex-Gymkhana/Jamavar). Smart casual." },
+      "tips": "Sloane Square (District/Circle) is a 5 min walk. From Soho: Piccadilly line to South Kensington, or bus 19/22 down to the King's Road. If running late, call the restaurant."
+    },
+    {
+      "id": "oma",
+      "type": "dinner",
+      "fixed": true,
+      "title": "Dinner at OMA",
+      "start": "2026-10-11T21:00:00+01:00",
+      "end": "2026-10-11T23:30:00+01:00",
+      "arriveEarlyMin": 5,
+      "location": { "name": "OMA", "address": "3 Bedale Street, London SE1 9AL (upstairs from Agora, Borough Market)", "lat": 51.5052, "lng": -0.0907 },
+      "details": { "party": "5", "booking": "SevenRooms #4UVNHC4L358T", "style": "Greek-inspired, crudo bar + live-fire kitchen by David Carter (Smokestak, Manteca). Sunday kitchen hours listed as 12:00–22:00, so be on time." },
+      "tips": "London Bridge station (Jubilee/Northern) is 3 min away. Getting home: Jubilee line London Bridge → Bond Street (~12 min). Sunday night: no Night Tube, last Jubilee trains are around 23:30–00:00, so Uber/black cab if you stay out (~£20–30)."
+    },
+    {
+      "id": "checkout",
+      "type": "task",
+      "fixed": false,
+      "title": "Airbnb checkout (bags packed)",
+      "start": "2026-10-12T10:00:00+01:00",
+      "end": "2026-10-12T10:30:00+01:00",
+      "location": { "name": "Airbnb (Marylebone)", "address": "Marylebone, London W1", "lat": 51.514, "lng": -0.1610 },
+      "reminders": [
+        {
+          "at": "2026-10-12T09:15:00+01:00",
+          "kind": "reminder",
+          "facts": {
+            "topic": "Checkout + airport plan",
+            "checkout": "Assumed checkout 10:00 (edit itinerary.json if your Airbnb says otherwise). Do a sweep: chargers, passports, anything in the fridge.",
+            "airport": "Elizabeth line from Bond Street (10 min walk) direct to Heathrow Terminals 2&3 (~30 min). Plan to leave around 10:30–10:45 to be at T3 by 11:30.",
+            "breakfast": "Quick options within 10 min walk: Selfridges Foodhall (opens 10:00), Paul Rothe & Son on Marylebone Lane (old-school deli, opens early on weekdays)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "vs141",
+      "type": "flight",
+      "fixed": true,
+      "title": "VS141 Heathrow (LHR) → Los Angeles (LAX)",
+      "start": "2026-10-12T14:30:00+01:00",
+      "end": "2026-10-12T17:45:00-07:00",
+      "arriveBy": "2026-10-12T11:30:00+01:00",
+      "location": { "name": "Heathrow Terminal 3", "address": "Heathrow Airport Terminal 3, Hounslow TW6 1QG", "lat": 51.4710, "lng": -0.4560 },
+      "details": { "airline": "Virgin Atlantic", "flight": "VS141", "confirmation": "EA49GM", "terminal": "Terminal 3 (Virgin's Heathrow terminal; confirm in the Virgin app)", "lands": "LAX 17:45 local" },
+      "tips": "Elizabeth line from Bond Street to 'Heathrow Terminals 2 & 3' (not the Terminal 5 branch), ~30 min. Contactless/Apple Pay. Last chance for London shopping is T3 airside."
+    }
+  ]
+}

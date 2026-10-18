@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Launcher: ./studio <command>. Loads .env and the studio virtualenv.
+cd "$(dirname "$0")"
+set -a
+[[ -f .env ]] && source .env
+set +a
+PY=python3
+[[ -x .venv/bin/python ]] && PY=.venv/bin/python
+export STUDIO_DATA="${STUDIO_DATA:-$HOME/Trip Footage/Studio}"
+INBOX="${STUDIO_INBOX:-$HOME/Trip Footage/Inbox}"
+if [[ "$1" == "serve" ]]; then
+  shift
+  exec "$PY" -m reel.cli serve --inbox "$INBOX" "$@"
+fi
+if [[ "$1" == "nightly" && -z "$2" ]]; then
+  exec "$PY" -m reel.cli nightly "$INBOX"
+fi
+exec "$PY" -m reel.cli "$@"
